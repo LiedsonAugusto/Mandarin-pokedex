@@ -1,0 +1,9 @@
+#corpo {
+    width: 25rem;
+}
+
+@media (max-width: 415px) {
+    #corpo{
+        width: 20rem;
+    }
+}

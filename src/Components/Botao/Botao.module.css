@@ -1,0 +1,61 @@
+#btnDireito{
+    color: #0d6efd;
+    border-radius: 0.75rem;
+    border: 2px solid #0d6efd;
+    background-color: transparent;
+    padding: 10px;
+    position: fixed;
+    bottom: 50%;
+    right: 50px;
+    transition: 0.3s;
+}
+
+#btnDireito:hover{
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+}
+
+#btnEsquerdo{
+    color: #0d6efd;
+    border-radius: 0.75rem;
+    border: 2px solid #0d6efd;
+    background-color: transparent;
+    padding: 10px;
+    position: fixed;
+    bottom: 50%;
+    left: 50px;
+    transition: 0.3s;
+}
+
+#btnEsquerdo:hover{
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+}
+
+@media (max-width: 670px) {
+    #btnDireito{
+        bottom: 13%;
+        right: 130px;
+        padding: 10px 30px;
+    }
+    #btnEsquerdo{
+        bottom: 13%;
+        left: 130px;
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 485px) {
+    #btnDireito{
+        bottom: 13%;
+        right: 39px;
+        padding: 10px 30px;
+    }
+    #btnEsquerdo{
+        bottom: 13%;
+        left: 39px;
+        padding: 10px 30px;
+    }
+}
