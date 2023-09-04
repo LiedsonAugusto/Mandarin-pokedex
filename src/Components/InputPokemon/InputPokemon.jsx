@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button, Form, InputGroup } from 'react-bootstrap'
 import { TbPokeball } from "react-icons/tb";
 import { AiOutlineSearch } from "react-icons/ai";
-import Alerta from '../../Alerta/Alerta';
+import Alerta from '../Alerta/Alerta';
 
 
 export default function InputPokemon({getPokemonPorNome, setId}) {
@@ -12,19 +12,13 @@ export default function InputPokemon({getPokemonPorNome, setId}) {
 
   async function trocar (){
     let resultado = await getPokemonPorNome(nomeInput, setId)
-    // if (resultado){
-    //   setVerificar("none")
-    // } else{
-    //   setVerificar("flex")
-    // } 
     resultado === 1 ? setVerificar("none") : setVerificar("flex")
-    // style={{backgroundColor: "#f8f9fa"}} 
   }
 
   return (
-    <>
-      <div className='d-flex'>
-        <InputGroup className="mt-4">
+    <div className='d-flex justify-content-center align-items-center flex-column'>
+      <div className='d-flex mt-5 w-25'>
+        <InputGroup>
           <InputGroup.Text className='fs-4'><TbPokeball/></InputGroup.Text>
           <Form.Control
             onChange={(e)=>setNomeInput(e.target.value)}
@@ -36,6 +30,6 @@ export default function InputPokemon({getPokemonPorNome, setId}) {
       <Alerta
         display={verificar}
       />
-    </>
+    </div>
   )
 }

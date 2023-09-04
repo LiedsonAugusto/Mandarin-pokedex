@@ -21,7 +21,7 @@ export async function getPokemons(id, setNome,setTipo,setImage, setBackground){
             const data = response.data
             setarPokemon(data[0], setNome,setTipo,setImage, setBackground)
         } catch(error){
-            console.log(error)
+            console.error(error);
         }
     } else {
         setarPokemon(pokemonStorage, setNome,setTipo,setImage, setBackground)
@@ -43,8 +43,10 @@ export async function getPokemonPorNome(nome, setId){
 
 
 function setarPokemon(data, setNome,setTipo,setImage, setBackground){
-    setImage(data.image_url)
-    setBackground(data.background_image_url)
-    setNome(data.name)
-    setTipo(data.category)
+    setTimeout(() => {
+        setImage(data.image_url)
+        setBackground(data.background_image_url)
+        setNome(data.name)
+        setTipo(data.category)
+    }, 500);
 }

@@ -1,0 +1,74 @@
+#esquerda{
+    transform: perspective(1000px) rotateY(-30deg);
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.fadeIn{
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes fadeIn {
+    from{
+        transform: translateX(-300px) scale(0.5);
+        transform-origin: right center;
+    }
+    to{
+        transform: perspective(1000px) rotateY(-30deg) translateX(0px) scale(1);
+        transform-origin: center center;
+    }
+}
+
+.fadeOut{
+    animation-name: fadeOut;
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes fadeOut {
+    from{
+        transform: perspective(1000px) rotateY(-30deg) scale(1);
+        transform-origin: center center;
+    }
+    to{
+        transform: translateX(-300px) scale(0.5);
+        transform-origin: right center;
+        opacity: 0;
+    }
+}
+
+.swapIn {
+    transform: perspective(1000px) rotateY(-30deg);
+    animation-name: swapIn;
+    animation-duration: 500ms;
+}
+
+@keyframes swapIn {
+    from {
+        transform: perspective(1000px) rotateY(70deg) translateZ(180px);
+        height: 27.5rem;
+    }
+    to {
+        transform: perspective(1000px) rotateY(-30deg) translateZ(0px);
+    }
+}
+
+.swapOut {
+    transform: perspective(1000px) rotateY(-30deg);
+    animation-name: swapOut;
+    animation-duration: 500ms;
+}
+
+@keyframes swapOut {
+    from {
+        transform: perspective(1000px) rotateY(-30deg) translateZ(0px) scale(1);
+    }
+    to {
+        transform: perspective(1000px) rotateY(78deg) translateZ(210px) scale(1);
+        height: 27.5rem;
+        opacity: 0.6;
+        filter: blur(0);
+    }
+}

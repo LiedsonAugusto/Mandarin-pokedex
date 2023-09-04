@@ -1,9 +1,10 @@
-#corpo {
-    width: 25rem;
+.esquerdaDireita{
+    filter: blur(2px);
+    opacity: 0.3;
+    background-image: url("../../../public/imgs/fundoCarta.jpg");
+    background-position: center;
 }
 
-@media (max-width: 415px) {
-    #corpo{
-        width: 20rem;
-    }
+.modeloCarta{
+    border-radius: 10px;
 }

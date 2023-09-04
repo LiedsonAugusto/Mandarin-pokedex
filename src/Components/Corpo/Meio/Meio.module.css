@@ -1,0 +1,65 @@
+.swapOutEsquerda{
+    animation-name: swapOutEsquerda;
+    animation-duration: 500ms;
+}
+
+@keyframes swapOutEsquerda {
+    from{
+        transform: perspective(1000px);
+    }   
+    to{
+        transform: perspective(1000px) rotateY(-81deg) translateZ(180px);
+        opacity: 0.5;
+        height: 27.5rem;
+    }
+}
+
+.swapInEsquerda{
+    animation-name: swapInEsquerda;
+    animation-duration: 500ms;
+}
+
+@keyframes swapInEsquerda {
+    from{
+        transform: perspective(1000px) rotateY(-81deg) translateZ(180px);
+        opacity: 0.5;
+        height: 27.5rem;
+        
+    }   
+    to{
+        transform: perspective(1000px);
+    }
+}
+
+.swapOutDireita{
+    animation-name: swapOutDireita;
+    animation-duration: 500ms;
+}
+
+@keyframes swapOutDireita {
+    from{
+        transform: perspective(1000px);
+    }   
+    to{
+        transform: perspective(1000px) rotateY(81deg) translateZ(180px);
+        opacity: 0.5;
+        height: 27.5rem;
+    }
+}
+
+.swapInDireita{
+    animation-name: swapInDireita;
+    animation-duration: 500ms;
+}
+
+@keyframes swapInDireita {
+    from{
+        transform: perspective(1000px) rotateY(81deg) translateZ(180px);
+        opacity: 0.5;
+        height: 27.5rem;
+        
+    }   
+    to{
+        transform: perspective(1000px);
+    }
+}
