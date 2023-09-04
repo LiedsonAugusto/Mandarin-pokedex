@@ -52,7 +52,7 @@ function setarPokemon(data, setNome,setTipo,setImage, setBackground, setCorDoMei
     }, 340);
 }
 
-function setarBackground (dataCategory, setCorMeio){
+function setarBackground(dataCategory, setCorMeio){
     switch(dataCategory){
       case "default":
         setCorMeio("white")

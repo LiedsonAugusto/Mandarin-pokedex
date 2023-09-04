@@ -45,20 +45,16 @@ export default function Botao({direcao, id, setId, setFadeOutDireita, setFadeInD
         }, 500);
     }
 
-    const oi = () =>{
-        console.log('oi');
-    }
-
   return (
     <>
         {direcao == "esquerda" && (
             <div>
-                <button onClick={botaoEsquerdo} id={styles.btnEsquerdo} ><AiOutlineArrowLeft className="fs-2" /></button>{' '}
+                <button onClick={botaoEsquerdo} className={`fs-2 ${styles.btnComum}`} id={styles.btnEsquerdo} ><AiOutlineArrowLeft/></button>{' '}
             </div>
         )}
         {direcao == "direita" && (
             <div>
-                <button onClick={botaoDireito} id={styles.btnDireito}><AiOutlineArrowRight className="fs-2" /></button>{' '}
+                <button onClick={botaoDireito} className={`fs-2 ${styles.btnComum}`} id={styles.btnDireito}><AiOutlineArrowRight /></button>{' '}
             </div>
         )}
     </>

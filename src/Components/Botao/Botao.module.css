@@ -1,61 +1,46 @@
 #btnDireito{
-    color: #dc3545;
-    border-radius: 0.75rem;
-    border: 2px solid #dc3545;
-    background-color: rgba(255, 255, 255, 0.185);
-    padding: 10px;
-    position: fixed;
-    bottom: 50%;
     right: 50px;
-    transition: 0.3s;
-}
-
-#btnDireito:hover{
-    background-color: #dc3545;
-    color: white;
-    border-color: #dc3545;
 }
 
 #btnEsquerdo{
+    left: 50px;
+}
+
+.btnComum{
     color: #dc3545;
     border-radius: 0.75rem;
     border: 2px solid #dc3545;
     background-color: rgba(255, 255, 255, 0.185);
-    padding: 10px;
+    padding: 5px 10px;
     position: fixed;
     bottom: 50%;
-    left: 50px;
     transition: 0.3s;
 }
 
-#btnEsquerdo:hover{
+.btnComum:hover{
     background-color: #dc3545;
     color: white;
     border-color: #dc3545;
 }
 
 @media (max-width: 1145px) {
-    #btnDireito{
+    .btnComum{
         bottom: 3%;
-        right: 130px;
         padding: 10px 30px;
     }
+    #btnDireito{
+        right: 130px;
+    }
     #btnEsquerdo{
-        bottom: 3%;
         left: 130px;
-        padding: 10px 30px;
     }
 }
 
 @media (max-width: 485px) {
     #btnDireito{
-        bottom: 3%;
         right: 39px;
-        padding: 10px 30px;
     }
     #btnEsquerdo{
-        bottom: 3%;
         left: 39px;
-        padding: 10px 30px;
     }
 }
