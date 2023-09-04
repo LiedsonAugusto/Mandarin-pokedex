@@ -1,4 +1,6 @@
 import axios from "axios"
+let arrayTipos = ["default", "ice", "grass", "psychic", "fire", "water", "bug", "electric", "ground", "rock", "normal"]
+let arrayRGBS =["white", "rgb(174, 255, 255)", "rgb(166, 240, 166)", "rgb(255, 191, 202)", "rgb(225, 128, 88)", "rgb(136, 168, 255)", "rgb(218, 255, 148)", "rgb(255, 255, 130)", "rgb(228, 176, 98)", "rgb(170, 136, 82)", "rgb(192, 192, 192)"]
 
 export async function armazenarNoSessionStorage(){
     try{
@@ -53,42 +55,10 @@ function setarPokemon(data, setNome,setTipo,setImage, setBackground, setCorDoMei
 }
 
 function setarBackground(dataCategory, setCorMeio){
-    switch(dataCategory){
-      case "default":
-        setCorMeio("white")
-        break;
-      case "ice":
-        setCorMeio("rgb(174, 255, 255)")
+    for (let i = 0; i < arrayTipos.length; i++){
+      if (arrayTipos[i] === dataCategory){
+        setCorMeio(arrayRGBS[i])
         break
-      case "grass":
-        setCorMeio("rgb(166, 240, 166)")
-        break
-      case "psychic":
-        setCorMeio("rgb(255, 191, 202)")
-        break
-      case "fire":
-        setCorMeio("rgb(225, 128, 88)")
-        break
-      case "water":
-        setCorMeio("rgb(136, 168, 255)")
-        break
-      case "bug":
-        setCorMeio("rgb(218, 255, 148)")
-        break
-      case "electric":
-        setCorMeio("rgb(255, 255, 130)")
-        break
-      case "ground":
-        setCorMeio("rgb(228, 176, 98)")
-        break
-      case "rock":
-        setCorMeio("rgb(170, 136, 82)")
-        break
-      case "normal":
-        setCorMeio("rgb(192, 192, 192)")
-        break
-      default:
-        setCorMeio("white")
-        break;
-    } 
+      }
+    }
   }

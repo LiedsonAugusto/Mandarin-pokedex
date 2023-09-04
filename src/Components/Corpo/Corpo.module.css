@@ -2,6 +2,7 @@
     filter: blur(2px);
     opacity: 0.5;
     background-image: url("../../../public/imgs/fundoCarta.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }

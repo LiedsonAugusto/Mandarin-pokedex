@@ -1,7 +1,5 @@
 #direita{
     transform: perspective(1000px) rotateY(30deg);
-    transform-origin: center center;
-    background-repeat: no-repeat;
     z-index: -1;
 }
 
@@ -20,11 +18,9 @@
 @keyframes fadeIn {
     from{
         transform: translateX(300px) scale(0.5);
-        transform-origin: right center;
     }
     to{
         transform: perspective(1000px) rotateY(30deg) translateX(0px) scale(1);
-        transform-origin: center center;
     }
 }
 

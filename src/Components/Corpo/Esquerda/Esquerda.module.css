@@ -1,6 +1,5 @@
 #esquerda{
     transform: perspective(1000px) rotateY(-30deg);
-    background-repeat: no-repeat;
     z-index: -1;
 }
 
@@ -19,11 +18,9 @@
 @keyframes fadeIn {
     from{
         transform: translateX(-300px) scale(0.5);
-        transform-origin: right center;
     }
     to{
         transform: perspective(1000px) rotateY(-30deg) translateX(0px) scale(1);
-        transform-origin: center center;
     }
 }
 
@@ -36,11 +33,9 @@
 @keyframes fadeOut {
     from{
         transform: perspective(1000px) rotateY(-30deg) scale(1);
-        transform-origin: center center;
     }
     to{
         transform: translateX(-300px) scale(0.5);
-        transform-origin: right center;
         opacity: 0;
     }
 }

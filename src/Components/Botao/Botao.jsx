@@ -1,4 +1,3 @@
-import React from 'react'
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import styles from "./Botao.module.css"
 
@@ -12,9 +11,9 @@ export default function Botao({direcao, id, setId, setFadeOutDireita, setFadeInD
         setTimeout(() => {
             setFadeOutDireita(false)
             setSwapOutEsquerda(false)
+            setSwapOutMeioDireita(false)
             setSwapInDireita(true)
             setFadeInEsquerda(true)
-            setSwapOutMeioDireita(false)
             setSwapInMeioEsquerda(true)
             setTimeout(() => {
                 setSwapInDireita(false)
@@ -26,16 +25,15 @@ export default function Botao({direcao, id, setId, setFadeOutDireita, setFadeInD
 
     const botaoEsquerdo = () =>{
         id > 16 ? setId((prevId) => prevId - 1) : setId(30)
-
         setFadeOutEsquerda(true)
         setSwapOutDireita(true)
         setSwapOutMeioEsquerda(true)
         setTimeout(() => {
             setFadeOutEsquerda(false)
             setSwapOutDireita(false)
+            setSwapOutMeioEsquerda(false)
             setSwapInEsquerda(true)
             setFadeInDireita(true)
-            setSwapOutMeioEsquerda(false)
             setSwapInMeioDireita(true)
             setTimeout(() => {
                 setSwapInEsquerda(false)
@@ -49,12 +47,12 @@ export default function Botao({direcao, id, setId, setFadeOutDireita, setFadeInD
     <>
         {direcao == "esquerda" && (
             <div>
-                <button onClick={botaoEsquerdo} className={`fs-2 ${styles.btnComum}`} id={styles.btnEsquerdo} ><AiOutlineArrowLeft/></button>{' '}
+                <button onClick={botaoEsquerdo} className={`fs-2 ${styles.btnComum}`} id={styles.btnEsquerdo} ><AiOutlineArrowLeft/></button>
             </div>
         )}
         {direcao == "direita" && (
             <div>
-                <button onClick={botaoDireito} className={`fs-2 ${styles.btnComum}`} id={styles.btnDireito}><AiOutlineArrowRight /></button>{' '}
+                <button onClick={botaoDireito} className={`fs-2 ${styles.btnComum}`} id={styles.btnDireito}><AiOutlineArrowRight /></button>
             </div>
         )}
     </>

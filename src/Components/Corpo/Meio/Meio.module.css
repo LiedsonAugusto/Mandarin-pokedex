@@ -5,6 +5,7 @@
 .swapOutEsquerda{
     animation-name: swapOutEsquerda;
     animation-duration: 500ms;
+    animation-fill-mode: forwards;
 }
 
 @keyframes swapOutEsquerda {
@@ -38,6 +39,7 @@
 .swapOutDireita{
     animation-name: swapOutDireita;
     animation-duration: 500ms;
+    animation-fill-mode: forwards;
 }
 
 @keyframes swapOutDireita {
