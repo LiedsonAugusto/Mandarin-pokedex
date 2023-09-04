@@ -56,7 +56,9 @@ npm install
 ```
 Feito isso, abra um servidor localhost e acesse a página pelo navegador, utilize este comando:
 ```bash
-npm run dev
+npm run preview
 ```
 
-Pronto! Feito isso é apenas necessário entrar em seu navegador em _localhost:5173_ (porta padrão do react) e ver o resultado, espero que goste!
+Dessa forma, ele irá abrir a página web, no _localhost:4173_, uma preview de como a página ficaria caso fosse postada em produção
+
+Pronto! Feito isso é apenas necessário entrar em seu navegador na porta indicada e ver o resultado, espero que goste!
