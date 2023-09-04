@@ -25,7 +25,7 @@ export default function InputPokemon({getPokemonPorNome, setId}) {
             onChange={(e)=>setNomeInput(e.target.value)}
             placeholder="Nome do pokemon"
           />
-          <Button onClick={trocar} variant="outline-primary"><AiOutlineSearch className='fs-4 ' /></Button>
+          <Button onClick={trocar} variant="outline-danger"><AiOutlineSearch className='fs-4 ' /></Button>
         </InputGroup>
       </div>
       <Alerta

@@ -1,8 +1,8 @@
 #btnDireito{
-    color: #0d6efd;
+    color: #dc3545;
     border-radius: 0.75rem;
-    border: 2px solid #0d6efd;
-    background-color: transparent;
+    border: 2px solid #dc3545;
+    background-color: rgba(255, 255, 255, 0.185);
     padding: 10px;
     position: fixed;
     bottom: 50%;
@@ -11,16 +11,16 @@
 }
 
 #btnDireito:hover{
-    background-color: #0d6efd;
+    background-color: #dc3545;
     color: white;
-    border-color: #0d6efd;
+    border-color: #dc3545;
 }
 
 #btnEsquerdo{
-    color: #0d6efd;
+    color: #dc3545;
     border-radius: 0.75rem;
-    border: 2px solid #0d6efd;
-    background-color: transparent;
+    border: 2px solid #dc3545;
+    background-color: rgba(255, 255, 255, 0.185);
     padding: 10px;
     position: fixed;
     bottom: 50%;
@@ -29,9 +29,9 @@
 }
 
 #btnEsquerdo:hover{
-    background-color: #0d6efd;
+    background-color: #dc3545;
     color: white;
-    border-color: #0d6efd;
+    border-color: #dc3545;
 }
 
 @media (max-width: 1145px) {

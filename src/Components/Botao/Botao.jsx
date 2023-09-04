@@ -6,26 +6,6 @@ export default function Botao({direcao, id, setId, setFadeOutDireita, setFadeInD
 
     const botaoDireito = () =>{
         id < 30 ? setId((prevId) => prevId + 1) : setId(16)
-        setFadeOutEsquerda(true)
-        setSwapOutDireita(true)
-        setSwapOutMeioEsquerda(true)
-        setTimeout(() => {
-            setFadeOutEsquerda(false)
-            setSwapOutDireita(false)
-            setSwapInEsquerda(true)
-            setFadeInDireita(true)
-            setSwapOutMeioEsquerda(false)
-            setSwapInMeioDireita(true)
-            setTimeout(() => {
-                setSwapInEsquerda(false)
-                setFadeInDireita(false)
-                setSwapInMeioDireita(false)
-            }, 500);
-        }, 500);
-    }
-
-    const botaoEsquerdo = () =>{
-        id > 16 ? setId((prevId) => prevId - 1) : setId(30)
         setFadeOutDireita(true)
         setSwapOutEsquerda(true)
         setSwapOutMeioDireita(true)
@@ -40,6 +20,27 @@ export default function Botao({direcao, id, setId, setFadeOutDireita, setFadeInD
                 setSwapInDireita(false)
                 setFadeInEsquerda(false)
                 setSwapInMeioEsquerda(false)
+            }, 500);
+        }, 500);
+    }
+
+    const botaoEsquerdo = () =>{
+        id > 16 ? setId((prevId) => prevId - 1) : setId(30)
+
+        setFadeOutEsquerda(true)
+        setSwapOutDireita(true)
+        setSwapOutMeioEsquerda(true)
+        setTimeout(() => {
+            setFadeOutEsquerda(false)
+            setSwapOutDireita(false)
+            setSwapInEsquerda(true)
+            setFadeInDireita(true)
+            setSwapOutMeioEsquerda(false)
+            setSwapInMeioDireita(true)
+            setTimeout(() => {
+                setSwapInEsquerda(false)
+                setFadeInDireita(false)
+                setSwapInMeioDireita(false)
             }, 500);
         }, 500);
     }

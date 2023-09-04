@@ -16,7 +16,6 @@ function App() {
   const [image, setImage] = useState()
   const [background, setBackground] = useState()
 
-
   const [fadeOutDireita, setFadeOutDireita] = useState(false)
   const [fadeInDireita, setFadeInDireita] = useState(false)
   const [fadeOutEsquerda, setFadeOutEsquerda] = useState(false)
@@ -30,13 +29,15 @@ function App() {
   const [swapInMeioEsquerda, setSwapInMeioEsquerda] = useState(false)
   const [swapInMeioDireita, setSwapInMeioDireita] = useState(false)
 
+  const [corDoMeio, setCorDoMeio] = useState("white")
+
 
   useEffect(()=>{
     armazenarNoSessionStorage()
   }, [])
 
   useEffect(()=>{
-    getPokemons(id, setNome,setTipo,setImage, setBackground)
+    getPokemons(id, setNome,setTipo,setImage, setBackground, setCorDoMeio)
   }, [id])
 
   return (
@@ -55,7 +56,7 @@ function App() {
           tipo={tipo}
           image={image}
           background={background}
-          ladoCarta={"meio"}
+          corDoMeio={corDoMeio}
           swapOutEsquerda={swapOutMeioEsquerda}
           swapOutDireita={swapOutMeioDireita}
           swapInEsquerda={swapInMeioEsquerda}

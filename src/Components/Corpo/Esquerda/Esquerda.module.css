@@ -30,7 +30,7 @@
 .fadeOut{
     animation-name: fadeOut;
     animation-duration: 500ms;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 @keyframes fadeOut {
