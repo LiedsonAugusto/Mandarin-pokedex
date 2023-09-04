@@ -34,14 +34,14 @@
     border-color: #0d6efd;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 1145px) {
     #btnDireito{
-        bottom: 13%;
+        bottom: 3%;
         right: 130px;
         padding: 10px 30px;
     }
     #btnEsquerdo{
-        bottom: 13%;
+        bottom: 3%;
         left: 130px;
         padding: 10px 30px;
     }
@@ -49,12 +49,12 @@
 
 @media (max-width: 485px) {
     #btnDireito{
-        bottom: 13%;
+        bottom: 3%;
         right: 39px;
         padding: 10px 30px;
     }
     #btnEsquerdo{
-        bottom: 13%;
+        bottom: 3%;
         left: 39px;
         padding: 10px 30px;
     }

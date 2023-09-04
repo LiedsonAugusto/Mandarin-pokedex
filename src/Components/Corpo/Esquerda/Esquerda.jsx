@@ -7,7 +7,7 @@ import styles from "./Esquerda.module.css"
 export default function Esquerda({fadeOut, swapIn, swapOut, fadeIn}) {
 
   return (
-    <div id='esquerda'>
+    <div id='esquerda' className={styles.resolucao}>
         <Card id={styles.esquerda} className={`d-flex ${stylesCorpo.esquerdaDireita} 
         ${stylesCorpo.modeloCarta}
         ${swapIn ? styles.swapIn : ''} 

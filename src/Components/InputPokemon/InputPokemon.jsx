@@ -3,6 +3,7 @@ import { Button, Form, InputGroup } from 'react-bootstrap'
 import { TbPokeball } from "react-icons/tb";
 import { AiOutlineSearch } from "react-icons/ai";
 import Alerta from '../Alerta/Alerta';
+import styles from "./InputPokemon.module.css"
 
 
 export default function InputPokemon({getPokemonPorNome, setId}) {
@@ -17,7 +18,7 @@ export default function InputPokemon({getPokemonPorNome, setId}) {
 
   return (
     <div className='d-flex justify-content-center align-items-center flex-column'>
-      <div className='d-flex mt-5 w-25'>
+      <div className={`d-flex mt-5 ${styles.tamanhoInput}`}>
         <InputGroup>
           <InputGroup.Text className='fs-4'><TbPokeball/></InputGroup.Text>
           <Form.Control

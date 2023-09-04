@@ -17,7 +17,7 @@ export default function Meio({nome, tipo, image, background, swapOutEsquerda, sw
           <div>
             <h2 className='text-center p-2 mt-3'>{nome}</h2>
             <div className='p-5 d-flex justify-content-center align-items-center' style={{backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
-              <img height={"180px"} src={`${image}`} alt="..." />
+              <img height={"150px"} src={`${image}`} alt="..." />
             </div>
             <Card.Body className='text-center mt-3'>
               <h5>Type: {tipo}</h5>

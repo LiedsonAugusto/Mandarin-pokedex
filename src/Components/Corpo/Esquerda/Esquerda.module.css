@@ -4,6 +4,12 @@
     z-index: -1;
 }
 
+@media (max-width: 670px) {
+    .resolucao{
+        display: none;
+    }
+}
+
 .fadeIn{
     animation-name: fadeIn;
     animation-duration: 500ms;

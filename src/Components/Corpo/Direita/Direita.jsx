@@ -8,7 +8,7 @@ import styles from "./Direita.module.css"
 export default function Direita({fadeOut, fadeIn, swapOut, swapIn}) {
 
   return (
-    <div id="direita">
+    <div id="direita" className={styles.resolucao}>
         <Card id={styles.direita} className={`d-flex ${stylesCorpo.esquerdaDireita} 
         ${stylesCorpo.modeloCarta} 
         ${fadeOut ? styles.fadeOut : ''}
