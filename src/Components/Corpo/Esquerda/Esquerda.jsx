@@ -1,9 +1,15 @@
 import { Card } from 'react-bootstrap'
 import stylesCorpo from "../Corpo.module.css"
 import styles from "./Esquerda.module.css"
+import { useContext } from 'react';
+import { LeftAnimationContext } from '../../../Context/LeftAnimationContext';
 
 
-export default function Esquerda({fadeOut, swapIn, swapOut, fadeIn}) {
+export default function Esquerda() {
+
+  const { fadeOutEsquerda, setFadeOutEsquerda ,fadeInEsquerda, setFadeInEsquerda ,swapOutEsquerda, setSwapOutEsquerda ,swapInEsquerda, setSwapInEsquerda } = useContext(LeftAnimationContext)
+
+  console.log("renderizou esquerda");
 
   return (
     <div id='esquerda' className={styles.resolucao}>
@@ -12,10 +18,10 @@ export default function Esquerda({fadeOut, swapIn, swapOut, fadeIn}) {
           className={`d-flex 
           ${stylesCorpo.esquerdaDireita} 
           ${stylesCorpo.modeloCarta}
-          ${swapIn ? styles.swapIn : ''} 
-          ${fadeOut ? styles.fadeOut : ''}
-          ${swapOut ? styles.swapOut : ''}
-          ${fadeIn ? styles.fadeIn : ''}`} 
+          ${swapInEsquerda ? styles.swapIn : ''} 
+          ${fadeOutEsquerda ? styles.fadeOut : ''}
+          ${swapOutEsquerda ? styles.swapOut : ''}
+          ${fadeInEsquerda ? styles.fadeIn : ''}`} 
           style={{width: "20vw", height: "362px", maxWidth: "20rem"}}>
         </Card>
     </div>

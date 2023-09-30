@@ -1,7 +1,19 @@
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import styles from "./Botao.module.css"
+import { memo, useContext } from "react";
+import { MeioAnimationContext } from "../../Context/MeioAnimationContext";
+import { RightAnimationContext } from "../../Context/RightAnimationContext";
+import { LeftAnimationContext } from "../../Context/LeftAnimationContext";
+import { IdContext } from "../../Context/IdContext";
 
-export default function Botao({direcao, id, setId, setFadeOutDireita, setFadeInDireita, setFadeOutEsquerda, setFadeInEsquerda ,setSwapInEsquerda, setSwapInDireita, setSwapOutEsquerda, setSwapOutDireita, setSwapOutMeioEsquerda, setSwapOutMeioDireita, setSwapInMeioEsquerda, setSwapInMeioDireita}) {
+function Botao({direcao}) {
+
+    const { id, setId } = useContext(IdContext)
+    const { fadeOutEsquerda, setFadeOutEsquerda ,fadeInEsquerda, setFadeInEsquerda ,swapOutEsquerda, setSwapOutEsquerda ,swapInEsquerda, setSwapInEsquerda } = useContext(LeftAnimationContext)
+    const { fadeOutDireita, setFadeOutDireita ,fadeInDireita, setFadeInDireita ,swapOutDireita, setSwapOutDireita ,swapInDireita, setSwapInDireita } = useContext(RightAnimationContext)
+    const { swapInMeioEsquerda, setSwapInMeioEsquerda ,swapInMeioDireita, setSwapInMeioDireita ,swapOutMeioEsquerda, setSwapOutMeioEsquerda ,swapOutMeioDireita, setSwapOutMeioDireita } = useContext(MeioAnimationContext)
+
+    console.log("renderizou botao");
 
     const botaoDireito = () =>{
         id < 30 ? setId((prevId) => prevId + 1) : setId(16)
@@ -59,3 +71,5 @@ export default function Botao({direcao, id, setId, setFadeOutDireita, setFadeInD
     
   )
 }
+
+export const BotaoMemo = memo(Botao)

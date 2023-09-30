@@ -1,17 +1,35 @@
 import { Card } from 'react-bootstrap'
 import stylesCorpo from "../Corpo.module.css"
 import styles from "./Meio.module.css"
+import { useContext } from 'react';
+import { CorpoContext } from '../../../Context/CorpoContext';
+import { CorDoMeioContext } from '../../../Context/CorDoMeioContext';
+import { MeioAnimationContext } from '../../../Context/MeioAnimationContext';
 
-export default function Meio({nome, tipo, image, background, corDoMeio ,swapOutEsquerda, swapOutDireita, swapInEsquerda, swapInDireita}) {
+
+export default function Meio() {
+
+  console.log("renderizou meio");
+
+  const { nome, 
+    setNome, 
+    tipo, 
+    setTipo, 
+    image, 
+    setImage, 
+    background, 
+    setBackground } = useContext(CorpoContext)
+  const { corDoMeio, setCorDoMeio } = useContext(CorDoMeioContext)
+  const { swapInMeioEsquerda, setSwapInMeioEsquerda ,swapInMeioDireita, setSwapInMeioDireita ,swapOutMeioEsquerda, setSwapOutMeioEsquerda ,swapOutMeioDireita, setSwapOutMeioDireita } = useContext(MeioAnimationContext)
 
   return (
       <Card  
         className={`d-flex justify-content-center 
         ${stylesCorpo.modeloCarta} 
-        ${swapOutEsquerda ? styles.swapOutEsquerda : ''}
-        ${swapOutDireita ? styles.swapOutDireita : ''}
-        ${swapInEsquerda ? styles.swapInEsquerda : ''}
-        ${swapInDireita ? styles.swapInDireita : ''}`} 
+        ${swapOutMeioEsquerda ? styles.swapOutEsquerda : ''}
+        ${swapOutMeioDireita ? styles.swapOutDireita : ''}
+        ${swapInMeioEsquerda ? styles.swapInEsquerda : ''}
+        ${swapInMeioDireita ? styles.swapInDireita : ''}`} 
         style={{width: "25vw", height: "28rem", maxWidth: "30rem", minWidth: "15rem", backgroundColor: `${corDoMeio}`}}>
         <div>
           <h2 className='text-center p-2 mt-3'>{nome}</h2>
